@@ -103,6 +103,18 @@
       "contact": "09034812345",
       "address": "158 Etta agbor Layout, calabar Muncipality",
       "id": 3
+    },
+    {
+      "name": "crunchies",
+      "contact": "090278167837",
+      "address": "6 Mary Slessor Avenue, Watt Market",
+      "id": 4
+    },
+    {
+      "name": "Dominos pizza",
+      "contact": "09057110320",
+      "address": "126 Ndidem isang iso,Opp Atekong",
+      "id": 5
     }
   ]
 }
