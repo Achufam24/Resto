@@ -1,23 +1,25 @@
 <template>
-    <div class="foot">
+      <div class="foot">
         <!--footer Content-->
-        <footer>
+        <transition name="fade1" appear>
+                <footer>
             <div >
             <a style="font-size:30px" href="#">Resto..</a>   
         </div>
-        <div class="col1">
+             <div class="col1 rotate">
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Resto Quality control</a>
         </div>
-        <div class="col2">
+        <div class="col2 rotate">
             <a href="#">Marketing Solutions</a>
             <a href="#">Advertisng</a>
             <a href="#">Terms and Conditions</a>
         </div>
         </footer>
+        </transition>      
         <h4>Resto Corpoartion &copy; 2022</h4>
-    </div>
+    </div> 
 </template>
 
 <script>
@@ -62,6 +64,32 @@ a{
 }
 .col2 a:hover{
   text-decoration: underline;
+}
+.fade1-enter-from{
+  opacity: 0;
+  transform: translateX(-300px)
+}
+.fade1-enter-to{
+  opacity: 1;
+  transform: translateX(0px)
+}
+.fade1-enter-active{
+  transition: all 17s ease;
+}
+.fade1-leave-from{
+ opacity: 1;
+  transform: translateX(0)
+}
+.fade1-leave-to{
+opacity: 0;
+transform: translateX(-300px)
+}
+.fade1-leave-active{
+  transition: all 17s ease;
+}
+@keyframes wobble {
+  0% {transform: translateY(-300px); opacity: 0}
+  50% {transform: translateY(0px); opacity: 1;}
 }
 /*responsive Footer*/
 @media only screen and (max-width: 600px) {

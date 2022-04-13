@@ -1,13 +1,13 @@
 <template>
     <div class="row2">
-        <div >
+        <div class="rotate" >
             <h1>Restaurant in one tap!</h1>
             <h3>Make your Restaurant visible to Millions</h3>
             <p>Register and add your Restaurant</p>
             <router-link to="SignUp" @click="Register">Register</router-link>
 
         </div>
-        <div>
+        <div class="rotate">
             <img src="@/assets/resto.svg" class="img-fluid"  alt="">
         </div>
     </div>

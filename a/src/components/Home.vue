@@ -1,7 +1,9 @@
 <template>
 <div>
  <Header/>
- <div style="margin-top:30px;">
+ <transition name="fade" appear>
+    <div>
+      <div style="margin-top:30px;">
   <h1>Hello {{name}}, welcome to Resto!</h1>
     <p>Your Restaurant Management App</p>
  </div>
@@ -25,6 +27,10 @@
             </td>
         </tr>
     </table>
+ </div>
+ </transition>
+ 
+ 
     <!-- Button trigger modal -->
 
   <Services/>
@@ -110,6 +116,32 @@ td button{
     height: 1.5rem;
     border-radius: 5px;
     color: #fff;
+}
+.fade-enter-from{
+  opacity: 0;
+  transform: translateX(-60px)
+}
+.fade-enter-to{
+  opacity: 1;
+  transform: translateX(0px)
+}
+.fade-enter-active{
+  transition: all 5s ease;
+}
+.fade-leave-from{
+ opacity: 1;
+  transform: translateX(0)
+}
+.fade-leave-to{
+opacity: 0;
+transform: translateX(-60px)
+}
+.fade-leave-active{
+  transition: all 5s ease;
+}
+@keyframes wobble {
+  0% {transform: translateY(-300px); opacity: 0}
+  90% {transform: translateY(0px); opacity: 1;}
 }
 </style> 
 

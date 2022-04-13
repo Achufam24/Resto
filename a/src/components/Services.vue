@@ -1,5 +1,7 @@
 <template> 
-<div style="margin-top:100px;">
+<transition name="des" appear>
+     <div >
+    <div style="margin-top:100px;" class="rotate">
   <h1>Resto Services</h1>
 <div class="container">
 <div class="card">
@@ -16,6 +18,8 @@
 </div>
 </div>
 </div>
+</div>
+</transition>
 </template>
 
 <script>
@@ -42,6 +46,32 @@ export default {
 .card img{
   width: 200px;
   height: 200px;
+}
+.des-enter-from{
+  opacity: 0;
+  transform: translateY(-300px)
+}
+.des-enter-to{
+  opacity: 1;
+  transform: translateY(0px)
+}
+.des-enter-active{
+  transition: all 9s ease;
+}
+.des-leave-from{
+ opacity: 1;
+  transform: translateY(0)
+}
+.des-leave-to{
+opacity: 0;
+transform: translateY(-300px)
+}
+.des-leave-active{
+  transition: all 9s ease;
+}
+@keyframes wobble {
+  0% {transform: translateY(-300px); opacity: 0}
+  50% {transform: translateY(0px); opacity: 1;}
 }
  @media only screen and (max-width: 600px) {
     .container{

@@ -99,12 +99,6 @@
       "id": 2
     },
     {
-      "name": "Lucrativo",
-      "contact": "09034812345",
-      "address": "158 Etta agbor Layout, calabar Muncipality",
-      "id": 3
-    },
-    {
       "name": "crunchies",
       "contact": "090278167837",
       "address": "6 Mary Slessor Avenue, Watt Market",
@@ -115,6 +109,12 @@
       "contact": "09057110320",
       "address": "126 Ndidem isang iso,Opp Atekong",
       "id": 5
+    },
+    {
+      "name": "Lucrativo",
+      "contact": "09032057110",
+      "address": "125 Etta Agbor Layout",
+      "id": 6
     }
   ]
 }

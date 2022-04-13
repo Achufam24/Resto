@@ -1,16 +1,16 @@
 <template>
 <!--REsponsive Nav-->
-<nav class="navbar navbar-expand-lg navbar-dark " style="height:auto;">
+<nav class="navbar navbar-expand-lg navbar-dark " style="height:70px; position:sticky; top:0;">
     <div class="container">
         <a href="#" class="navbar-brand">
             <span class="fw-bold text-light"><p style=" margin-left:2px; font-size:20px;">RESTO</p></span>
         </a>
        <!-- Nav button toggler-->
-        <button @click="toggleNav" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button @click="toggleNav"   class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon rotate" ></span>
         </button>
         <!--Navigation Content--> 
-        <div v-show="showNav" class="collapse navbar-collapse" id="navbarNav">
+              <div v-show="showNav" class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto" >  
                      <router-link class="nav-link text-light" to="/" >Home</router-link>
                      <router-link class="nav-link text-light" to="Add" >Add Resturant</router-link>
@@ -26,7 +26,7 @@
 <script>
 export default {
     name:'Header',
-    data() {
+   data() {
         return {
             showNav:'true'
         }
@@ -45,9 +45,9 @@ export default {
            this.$router.push({name:'SignUp'})
         },
         /*responsive menu toggling*/
-      toggleNav(){
+     /* toggleNav(){
           this.showNav=!this.showNav
-      }
+      }*/
     },
 }
 </script>
@@ -78,10 +78,36 @@ header{
         background: rgb(2, 2, 22);
         color: #fff;
     }
+    .navbar-toggler,.navbar-toggler-icon{
+        border: none;
+    }
+    button:focus,button:active {
+   box-shadow: none !important;
+   color: goldenrod !important;
+    }
+   .rotate {
+  animation: rotation 1s  linear;
+  animation-delay: 0s;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+    
+span:active{
+    opacity: 0;
+}
     /* responsive screen sizes*/
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 900px) {
    .navbar{
        height: 100%; 
+   }
+   nav{
+       height: auto !important;
    }
 }
 </style>
